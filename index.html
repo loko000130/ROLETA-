@@ -45,15 +45,17 @@
     .green { background-color: #0a0; }
     #jogarPara {
       margin-top: 30px;
-      font-size: 22px;
-      font-weight: bold;
+      font-size: 20px;
+      min-height: 40px;
+      text-align: center;
     }
     #result {
       margin-top: 10px;
-      font-size: 24px;
+      font-size: 28px;
       font-weight: bold;
-      color: gold;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      color: #0f0;
+      text-shadow: 0 0 8px #0f0;
+      min-height: 50px;
     }
     button {
       margin-top: 20px;
@@ -72,6 +74,24 @@
       grid-template-columns: repeat(6, 60px);
       gap: 8px;
     }
+
+    @media (max-width: 600px) {
+      .number {
+        width: 80px !important;
+        height: 80px !important;
+        font-size: 24px !important;
+      }
+      #jogarPara {
+        font-size: 28px !important;
+      }
+      #result {
+        font-size: 36px !important;
+      }
+      .grid {
+        grid-template-columns: repeat(4, 80px);
+        gap: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -82,11 +102,8 @@
 
   <div class="grid" id="numbersGrid"></div>
 
-  <div id="jogarPara">
-    <strong>JOGAR PARA:</strong>
-    <div id="result"></div>
-  </div>
-
+  <div id="jogarPara"><strong>JOGAR PARA:</strong></div>
+  <div id="result"></div>
   <button onclick="resetar()">Limpar</button>
 
   <audio id="clickSound" src="https://freesound.org/data/previews/82/82503_1022651-lq.mp3"></audio>
