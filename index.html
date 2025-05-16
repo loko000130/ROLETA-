@@ -45,8 +45,15 @@
     .green { background-color: #0a0; }
     #jogarPara {
       margin-top: 30px;
-      font-size: 20px;
-      min-height: 40px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #result {
+      margin-top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: gold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     }
     button {
       margin-top: 20px;
@@ -75,7 +82,11 @@
 
   <div class="grid" id="numbersGrid"></div>
 
-  <div id="jogarPara"><strong>JOGAR PARA:</strong> <span id="result"></span></div>
+  <div id="jogarPara">
+    <strong>JOGAR PARA:</strong>
+    <div id="result"></div>
+  </div>
+
   <button onclick="resetar()">Limpar</button>
 
   <audio id="clickSound" src="https://freesound.org/data/previews/82/82503_1022651-lq.mp3"></audio>
@@ -143,4 +154,4 @@
     }
   </script>
 </body>
-</html> VERSÃO INICIAL
+</html>
